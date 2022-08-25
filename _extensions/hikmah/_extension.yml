@@ -32,8 +32,8 @@ contributes:
       biblio-config: false  # Don't use the default template's biblatex commands
       cite-method: biblatex
       biblatex-chicago: false  # Custom flag for enabling biblatex-chicago
+      biblio-style: apa
       biblatexoptions:
-        - style=apa
         - backend=biber
       
       # The titlesec package provides its own mechanism for dealing with 
