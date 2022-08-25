@@ -1,0 +1,46 @@
+title: Hikma
+author: Andrew Heiss
+version: 0.0.1
+contributes:
+  formats:
+    common:
+      date-format: full
+    pdf:
+      # Template pieces
+      template-partials:
+        - "partials/title.tex"
+        - "partials/before-body.tex"
+      include-in-header:
+        - "include-in-header.tex"
+      
+      # Document styling
+      geometry:
+        - top=10pc     # 10p0
+        - bottom=10pc  # 10p0
+        - left=11pc    # 11p0
+        - right=11pc   # 11p0
+        - heightrounded
+      
+      # Citations and links
+      colorlinks: true
+      linkcolor: DarkSlateBlue
+      urlcolor: DarkSlateBlue
+      citecolor: DarkSlateBlue
+      link-citations: true
+
+      biblio-title: "References"
+      biblio-config: false  # Don't use the default template's biblatex commands
+      cite-method: biblatex
+      biblatex-chicago: false  # Custom flag for enabling biblatex-chicago
+      biblatexoptions:
+        - style=apa
+        - backend=biber
+      
+      # The titlesec package provides its own mechanism for dealing with 
+      # inline/block headings, so we need to disable pandoc's support for it
+      # (see https://stackoverflow.com/q/42916124/120898)
+      block-headings: false
+      # Indent paragraphs instead of adding space between them
+      indent: true
+    html:
+      theme: styles/pretty.scss

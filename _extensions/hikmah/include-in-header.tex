@@ -2,12 +2,11 @@
 % CUSTOM PREAMBLE STUFF
 % -----------------------
 
+% -----------------
 % Typography tweaks
 % -----------------
 % Indent size
 \setlength{\parindent}{1pc}  % 1p0
-
-
 
 % Wrap definition list terms
 % https://tex.stackexchange.com/a/9763/11851
@@ -22,32 +21,35 @@
 \AtBeginEnvironment{longtable}{\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-\baselineskip}, after=\vspace*{-\baselineskip}}}
 
 
+% -----------------
 % Title block stuff
 % -----------------
 
 % Abstract
 \usepackage[overload]{textcase}
 \usepackage[runin]{abstract}
-\renewcommand{\abstractnamefont}{\sffamily\normalsize\bfseries\scshape\MakeLowercase}
+\renewcommand{\abstractnamefont}{\sffamily\footnotesize\bfseries\MakeUppercase}
 \renewcommand{\abstracttextfont}{\sffamily\small}
 \setlength{\absleftindent}{\parindent * 2}
 \setlength{\absrightindent}{\parindent * 2}
 \abslabeldelim{\quad}
 \setlength{\abstitleskip}{-\parindent}
 
+
+% Keywords
 \newenvironment{keywords}
-  {\vskip -3em \hspace{\parindent}\small\sffamily{\sffamily\normalsize\bfseries\scshape\MakeLowercase{Keywords}}\quad}
-  {\vskip 3em}
+{\vskip -3em \hspace{\parindent}\small\sffamily{\sffamily\footnotesize\bfseries\MakeUppercase{Keywords}}\quad}
+{\vskip 3em}
 
-% \usepackage{showframe}
+  
+% Title
 \usepackage{titling}
-
-% Style the title
 \setlength{\droptitle}{3em}
 \pretitle{\par\vskip 5em \begin{flushleft}\LARGE\sffamily\bfseries}
 \posttitle{\par\end{flushleft}\vskip 0.75em}
 
-% Style the authors
+
+% Authors
 %
 % PHEW this is complicated for a number of reasons!
 %
@@ -66,9 +68,8 @@
 % 0, but it requires some wonky syntax: {@{\hspace{0em}}l@{}}
 \renewcommand{\and}{\end{tabular} \hskip 3em \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
 \preauthor{\begin{flushleft}
-    %\large \lineskip 0.5em 
-    \lineskip 1.5em 
-    \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
+           \lineskip 1.5em 
+           \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
 \postauthor{\end{tabular}\par\end{flushleft}}
 
 % Omit the date since the \published command does that
@@ -84,8 +85,9 @@
        \par\noindent\footnotesize\sffamily \puB}
 
 
-
-% % Format section headings
+% ------------------
+% Section headings
+% ------------------
 \usepackage{titlesec}
 \titleformat*{\section}{\Large\sffamily\bfseries\raggedright}
 \titleformat*{\subsection}{\large\sffamily\bfseries\raggedright}
@@ -100,14 +102,20 @@
 
 
 % -----------
-% FOOTNOTES
+% Footnotes
 % -----------
-% NB: footmisc has to come after setspace and biblatex because of conflicts
+% NB: footmisc has to come after biblatex because of conflicts
 \usepackage[bottom, flushmargin]{footmisc}
 \renewcommand*{\footnotelayout}{\footnotesize}
 
 \addtolength{\skip\footins}{10pt}    % vertical space between rule and main text
 \setlength{\footnotesep}{5pt}  % vertical space between footnotes
+
+
+% ----------
+% Captions
+% ----------
+\usepackage[font={small,sf}, labelfont={small,sf,bf}]{caption}
 
 
 % ---------------------------
