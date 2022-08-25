@@ -41,8 +41,8 @@ quarto use template andrewheiss/hikmah-academic-quarto
 ## Examples
 
 - Default version of `template.qmd`:
-  - <template.qmd>
-  - <examples/hikmah-testing-default.pdf>
+  - [template.qmd](template.qmd)
+  - [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
 - Custom fonts + `biblatex-chicago`:
-  - <hikmah-testing-custom.qmd>
-  - <examples/hikmah-testing-custom.pdf>
+  - [hikmah-testing-custom.qmd](hikmah-testing-custom.qmd)
+  - [examples/hikmah-testing-custom.pdf](examples/hikmah-testing-custom.pdf)
