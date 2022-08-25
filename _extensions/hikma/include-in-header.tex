@@ -1,0 +1,115 @@
+% -----------------------
+% CUSTOM PREAMBLE STUFF
+% -----------------------
+
+% Typography tweaks
+% -----------------
+% Indent size
+\setlength{\parindent}{1pc}  % 1p0
+
+
+
+% Wrap definition list terms
+% https://tex.stackexchange.com/a/9763/11851
+\usepackage{enumitem}
+\setlist[description]{style=unboxed}
+
+% For better TOCs
+\usepackage{tocloft}
+
+% Remove left margin in lists inside longtables
+% https://tex.stackexchange.com/a/378190/11851
+\AtBeginEnvironment{longtable}{\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-\baselineskip}, after=\vspace*{-\baselineskip}}}
+
+
+% Title block stuff
+% -----------------
+
+% Abstract
+\usepackage[overload]{textcase}
+\usepackage[runin]{abstract}
+\renewcommand{\abstractnamefont}{\sffamily\normalsize\bfseries\scshape\MakeLowercase}
+\renewcommand{\abstracttextfont}{\sffamily\small}
+\setlength{\absleftindent}{\parindent * 2}
+\setlength{\absrightindent}{\parindent * 2}
+\abslabeldelim{\quad}
+\setlength{\abstitleskip}{-\parindent}
+
+\newenvironment{keywords}
+  {\vskip -3em \hspace{\parindent}\small\sffamily{\sffamily\normalsize\bfseries\scshape\MakeLowercase{Keywords}}\quad}
+  {\vskip 3em}
+
+% \usepackage{showframe}
+\usepackage{titling}
+
+% Style the title
+\setlength{\droptitle}{3em}
+\pretitle{\par\vskip 5em \begin{flushleft}\LARGE\sffamily\bfseries}
+\posttitle{\par\end{flushleft}\vskip 0.75em}
+
+% Style the authors
+%
+% PHEW this is complicated for a number of reasons!
+%
+% When using \and with multiple authors, the article class in LaTeX wraps each 
+% author block in a tabluar environment with a hardcoded center alignment. It's 
+% possible to use \preauthor{} to start tabulars with a left alignment {l}, but 
+% that only applies to the first author because the others all use \and with the 
+% hardcoded {c}. But we can override the \and command and add our own {l}
+%
+% (See https://github.com/rstudio/rmarkdown/issues/1716#issuecomment-560601691 
+% for an example of redefining \and to just be \\)
+%
+% That's all great, except tabulars have some amount of default horizontal 
+% padding, which makes left-aligned author blocks not actuall get fully 
+% left-aligned on the page. We can set the horizontal padding for the column to 
+% 0, but it requires some wonky syntax: {@{\hspace{0em}}l@{}}
+\renewcommand{\and}{\end{tabular} \hskip 3em \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
+\preauthor{\begin{flushleft}
+    %\large \lineskip 0.5em 
+    \lineskip 1.5em 
+    \begin{tabular}[t]{@{\hspace{0em}}l@{}}}
+\postauthor{\end{tabular}\par\end{flushleft}}
+
+% Omit the date since the \published command does that
+\predate{}
+\postdate{}
+
+% Command for a note at the top of the first page describing the publication
+% status of the paper.
+\newcommand{\published}[1]{%
+   \gdef\puB{#1}}
+   \newcommand{\puB}{}
+   \renewcommand{\maketitlehooka}{%
+       \par\noindent\footnotesize\sffamily \puB}
+
+
+
+% % Format section headings
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\sffamily\bfseries\raggedright}
+\titleformat*{\subsection}{\large\sffamily\bfseries\raggedright}
+\titleformat*{\subsubsection}{\normalsize\sffamily\bfseries\raggedright}
+\titleformat*{\paragraph}{\small\sffamily\bfseries\raggedright}
+
+% \titlespacing{<command>}{<left>}{<before-sep>}{<after-sep>}
+% Starred version removes indentation in following paragraph
+\titlespacing*{\section}{0em}{2em}{0.1em}
+\titlespacing*{\subsection}{0em}{1.25em}{0.1em}
+\titlespacing*{\subsubsection}{0em}{0.75em}{0em}
+
+
+% -----------
+% FOOTNOTES
+% -----------
+% NB: footmisc has to come after setspace and biblatex because of conflicts
+\usepackage[bottom, flushmargin]{footmisc}
+\renewcommand*{\footnotelayout}{\footnotesize}
+
+\addtolength{\skip\footins}{10pt}    % vertical space between rule and main text
+\setlength{\footnotesep}{5pt}  % vertical space between footnotes
+
+
+% ---------------------------
+% END CUSTOM PREAMBLE STUFF
+% ---------------------------

@@ -1,0 +1,52 @@
+$if(biblatex)$
+% No space between bib entries + use smaller font
+\setlength\bibitemsep{0pt}
+\renewcommand*{\bibfont}{\small}
+\setlength\bibhang{\parindent}
+$endif$
+
+$if(biblatex-chicago)$
+% No space between bib entries + use smaller font
+\setlength\bibitemsep{0pt}
+\renewcommand*{\bibfont}{\small}
+\setlength\bibhang{\parindent}
+
+%% Fix biblatex's odd preference for using In: by default.
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{}\intitlepunct}}}
+$endif$
+
+
+$if(published)$
+$if(code-repo)$
+\published{\textbf{$date$} \qquad $published$ \\ {\scriptsize $code-repo$}}
+$else$
+\published{\textbf{$date$} \qquad {\scriptsize $published$}}
+$endif$
+$else$
+$if(code-repo)$
+\published{\textbf{$date$} \\ {\scriptsize $code-repo$}}
+$else$
+\published{\textbf{$date$}}
+$endif$
+$endif$
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+\vskip 3em
+$endif$
+
+$if(keywords)$
+\begin{keywords}
+\def\sep{;\ }
+$for(keywords/allbutlast)$$keywords$\sep $endfor$
+$for(keywords/last)$$keywords$$endfor$
+\end{keywords}
+$endif$

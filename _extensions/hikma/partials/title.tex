@@ -1,0 +1,29 @@
+\usepackage{orcidlink}
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$endif$
+
+\author{
+$for(by-author)$
+{\large $it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$}%
+$if(it.attributes.corresponding)$\thanks{Corresponding author.}$endif$ \\%
+$for(it.affiliations/first)$$it.name$ \\$endfor$%
+{\footnotesize \url{$it.email$}} \and
+$endfor$
+}
+
+\date{}
+
+
+% End title stuff
