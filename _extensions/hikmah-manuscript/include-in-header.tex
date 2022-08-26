@@ -1,0 +1,105 @@
+% -----------------------
+% CUSTOM PREAMBLE STUFF
+% -----------------------
+
+% -----------------
+% Typography tweaks
+% -----------------
+% Indent size
+\setlength{\parindent}{0.5in}
+\setlength{\leftmargin}{0.5in}
+
+% Fix widows and orphans
+\usepackage[all,defaultlines=2]{nowidow}
+
+% List things
+\usepackage{enumitem}
+% Same document-level indentation for ordered and ordered lists
+\setlist[1]{labelindent=\parindent}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+% Wrap definition list terms
+% https://tex.stackexchange.com/a/9763/11851
+\setlist[description]{style=unboxed}
+
+
+% Typeset URLs the same font as their parent environment
+\usepackage{url}
+\urlstyle{same}
+
+% For better TOCs
+\usepackage{tocloft}
+
+% Remove left margin in lists inside longtables
+% https://tex.stackexchange.com/a/378190/11851
+\AtBeginEnvironment{longtable}{\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-\baselineskip}, after=\vspace*{-\baselineskip}}}
+
+% For fancy ORCID links
+\usepackage{orcidlink}
+
+% Indent all first paragraphs because APA wants that
+\usepackage{indentfirst}
+
+
+% -----------------
+% Title block stuff
+% -----------------
+
+% Abstract
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\abstracttextfont}{\normalsize}
+\setlength{\absleftindent}{\parindent}
+\setlength{\absrightindent}{\parindent}
+
+
+% Keywords
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}}#1}
+  
+% Title
+\usepackage{titling}
+\setlength{\droptitle}{2\baselineskip}
+\pretitle{\begin{center}\normalfont\normalsize\bfseries}
+\posttitle{\par\end{center}\vspace{2\baselineskip}}
+
+
+% ------------------
+% Section headings
+% ------------------
+\usepackage{titlesec}
+\titleformat*{\section}{\center\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries\itshape}
+\titleformat{\paragraph}[runin]{\bfseries}{\theparagraph.}{3pt}{\space}[.]
+\titleformat{\subparagraph}[runin]{\bfseries\itshape}{\thesubparagraph.}{3pt}{\space}[.]
+
+% \titlespacing{<command>}{<left>}{<before-sep>}{<after-sep>}
+% Starred version removes indentation in following paragraph
+\titlespacing*{\section}{0em}{2em}{0em}
+\titlespacing*{\subsection}{0em}{1em}{0em}
+\titlespacing*{\subsubsection}{0em}{0em}{0em}
+\titlespacing*{\paragraph}{\parindent}{1ex}{1em}
+\titlespacing*{\subparagraph}{\parindent}{1ex}{1em}
+
+
+% -----------
+% Footnotes
+% -----------
+% NB: footmisc has to come after biblatex because of conflicts
+\usepackage[bottom]{footmisc}
+\renewcommand*{\footnotelayout}{\footnotesize}
+
+\addtolength{\skip\footins}{12pt}  % vertical space between rule and main text
+\setlength{\footnotesep}{16pt}  % vertical space between footnotes
+
+
+% ----------
+% Captions
+% ----------
+\usepackage[font=normalsize]{caption}
+
+
+% ---------------------------
+% END CUSTOM PREAMBLE STUFF
+% ---------------------------

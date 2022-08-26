@@ -1,0 +1,106 @@
+% -----------------------
+% END-OF-PREAMBLE STUFF
+% -----------------------
+
+% For patching commands like \subtitle
+\usepackage{etoolbox}
+
+% -----------------
+% Running headers
+% -----------------
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{0.25in}
+\renewcommand{\headrulewidth}{0pt}  % Remove lines
+\renewcommand{\footrulewidth}{0pt}
+
+% SHORT TITLE           Page #
+\fancypagestyle{normal}{
+  \fancyhf{}
+  \lhead{\uppercase{$if(short-title)$ $short-title$ $else$ $title$ $endif$}}
+  \rhead{\thepage}
+}
+
+% Running head: SHORT TITLE        Page #
+\fancypagestyle{title}{
+  \fancyhf{}
+  \lhead{Running head: \uppercase{$if(short-title)$ $short-title$ $else$ $title$ $endif$}}
+  \rhead{}
+}
+
+% Use regular heading style
+\pagestyle{normal}
+
+
+$if(epigraph)$
+% -----------
+% Epigraphs
+% -----------
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\footnotesize}
+\setlength{\epigraphrule}{0em}
+\setlength{\beforeepigraphskip}{0em}
+\setlength{\afterepigraphskip}{1em}
+$endif$
+
+$if(biblatex)$
+% ----------
+% BibLaTeX
+% ----------
+$if(biblatex-chicago)$
+\usepackage[$if(biblio-style)$$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex-chicago}
+$else$
+\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+$endif$
+
+\setlength\bibitemsep{0pt}  % No space between bib entries
+\setlength\bibhang{\parindent}  % Match document indentation
+
+% Fix biblatex's odd preference for using In: by default.
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{}\intitlepunct}}}
+
+\addbibresource{$bibliography$}
+
+% Start bibliography on new page
+\pretocmd{\printbibliography}{\clearpage}{}{}
+$endif$
+
+% ---------------------- 
+% Title block elements
+% ---------------------- 
+\usepackage{authblk}
+\renewcommand*{\Authsep}{, }
+\renewcommand*{\Authand}{ and }
+\renewcommand*{\Authands}{, and }
+\renewcommand*{\Affilfont}{\normalsize}
+\renewcommand*{\Authfont}{\normalsize}
+
+$if(title)$
+\title{$title$$if(subtitle)$:$endif$}
+$endif$
+
+$if(subtitle)$
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par #1 \par}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$endif$
+
+$for(by-author)$
+\author[$for(it.affiliations)$$it.number$$sep$,$endfor$]{$by-author.name.literal$}
+$endfor$
+
+$for(by-affiliation)$
+\affil[$it.number$]{$it.name$}
+$endfor$
+
+\date{}
+
+
+% ---------------------------
+% END END-OF-PREAMBLE STUFF
+% ---------------------------

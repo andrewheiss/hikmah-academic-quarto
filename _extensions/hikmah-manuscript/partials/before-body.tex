@@ -1,0 +1,104 @@
+% ---------------
+% TITLE SECTION
+% ---------------
+
+\begin{titlepage}
+\center
+
+% Don't include a newpage before \maketitle
+{\let\newpage\relax\maketitle}
+
+% Needs to come after \maketitle
+\thispagestyle{title}
+
+\vspace{0.25in}
+
+$if(word-count)$
+{\center Word count: $word-count$}
+$endif$
+
+\vspace{0.5in}
+
+\begin{center}
+
+\textbf{Author note}
+
+$for(by-author)$
+\raggedright\setlength{\parindent}{0.5in}$it.name.literal$$if(it.orcid)$,~\orcidlink{$it.orcid$}~\url{https://orcid.org/$it.orcid$}$endif$$if(it.metadata.title)$, $it.metadata.title$$if(it.affiliations)$, $for(it.affiliations)$$if(it.department)$$it.department$, $endif$$it.name$$sep$; $endfor$ $endif$$endif$
+
+$endfor$
+
+\end{center}
+
+$if(correspondence-prefix)$
+\begin{center}
+
+\textbf{Correspondence}
+
+$for(by-author)$
+$if(it.attributes.corresponding)$
+\par\raggedright\setlength{\parindent}{0.5in}$correspondence-prefix$~$it.name.literal$$if(it.affiliations)$, $for(it.affiliations)$$if(it.department)$$it.department$, $endif$$it.name$, $if(it.address)$$it.address$, $endif$$if(it.city)$$it.city$, $endif$$if(it.region)$$it.region$ $endif$$if(it.postal-code)$$it.postal-code$$endif$$if(it.country)$, $it.country$$endif$$sep$; $endfor$ $endif$
+$endif$
+$endfor$
+
+\end{center}
+$endif$
+
+$if(additional-info)$
+\begin{center}
+
+\textbf{Additional information}
+
+\par\raggedright\setlength{\parindent}{0.5in}$additional-info$
+
+\end{center}
+$endif$
+
+$if(thanks)$
+\begin{center}
+
+\textbf{Acknowledgments}
+
+\par\raggedright\setlength{\parindent}{0.5in}$thanks$
+
+\end{center}
+$endif$
+
+\vfill  % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\doublespacing
+
+\begin{abstract}
+\noindent $abstract$
+\end{abstract}
+
+\vspace{\baselineskip}
+
+$if(keywords)$\indent \keywords{%
+$for(keywords)$$keywords$$sep$, $endfor$%
+}$endif$
+
+\newpage
+
+\begin{center}
+\singlespacing
+\textbf{$title$$if(subtitle)$:\\$subtitle$$endif$}
+\end{center}
+
+$if(epigraph)$
+$for(epigraph)$
+$if(epigraph.source)$
+\epigraph{$epigraph.text$}{---$epigraph.source$}
+$else$
+\epigraph{$epigraph.text$}
+$endif$
+$endfor$
+$endif$
+
+% -------------------
+% END TITLE SECTION
+% -------------------
+
+
