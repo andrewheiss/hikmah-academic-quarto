@@ -9,7 +9,7 @@ I've been using custom LaTeX templates (based in part on [Kieran Healy's templat
 Eventually this repository will hold all my templates:
 
 - Nice fancy PDF (`hikmah-pdf`) [Done!]
-- Manuscripty double-spaced PDF [Not here yet]
+- Manuscripty double-spaced PDF [Done!]
 - Nice fancy HTML [Not here yet]
 - Manuscripty double-spaced Word (.docx) [Not here yet]
 
@@ -42,7 +42,8 @@ quarto use template andrewheiss/hikmah-academic-quarto
 
 - Default version of `template.qmd`:
   - [template.qmd](template.qmd)
-  - [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
+  - Fancy PDF version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
+  - Manuscripty double spaced version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-manuscript-default.pdf)
 - Custom fonts + `biblatex-chicago`:
   - [hikmah-testing-custom.qmd](hikmah-testing-custom.qmd)
   - [examples/hikmah-testing-custom.pdf](examples/hikmah-testing-custom.pdf)

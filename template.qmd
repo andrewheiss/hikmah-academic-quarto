@@ -6,25 +6,37 @@ subtitle: A case study of a Cardassian patient
 short-title: Cranial Implants
 published: "Under review at *Starfleet Medical Journal*"
 code-repo: "Access the code, data, and analysis at <https://git.starfleet.ufp/bashir/cranial-implants>"
+correspondence-prefix: "Correspondence concerning this article should be addressed to"
 author:
   - name: Julian Bashir
     email: jbashir@starfleet.ufp
     orcid: 0000-0002-3948-3914
+    title: Chief Medical Officer
     affiliations: 
       - id: ds9
         name: Starbase Deep Space Nine
+        department: Sick Bay
+        address: 1234 Main Street
+        city: Anytown
+        region: NY
+        country: USA
+        postal-code: 90210
     attributes:
       corresponding: true
   - name: Elim Garak
     email: tailor.spy@obsidianorder.card.gov
+    title: Shopkeeper and Tailor
     affiliations:
-      - ref: ds9
       - id: terok
         name: Terok Nor
+        department: Promenade
+      - ref: ds9
 abstract: |
-  Space: the final frontier. These are the voyages of the starship *Enterprise* Its continuing mission: to explore strange new worlds. To seek out new life and new civilizations. To boldly go where no one has gone before!
+  Space: the final frontier. These are the voyages of the starship *Enterprise*. Its continuing mission: to explore strange new worlds. To seek out new life and new civilizations. To boldly go where no one has gone before!
 thanks: |
   Placeholder text generated at <https://vlad-saling.github.io/star-trek-ipsum/>.
+additional-info: |
+  We have no known conflict of interest to disclose.
 keywords:
   - surgery
   - espionage
@@ -38,6 +50,7 @@ epigraph:
 bibliography: references.bib
 format:
   hikmah-pdf: default
+  hikmah-manuscript-pdf: default
 ---
 
 We're acquainted with the wormhole phenomenon, but this... Is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times [@Lovelace:1842]. This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.
@@ -52,6 +65,10 @@ n_lights
 ```
 
 Any device like that would produce high levels of triolic waves. These walls have undergone some kind of selective molecular polarization. I haven't determined if our phaser energy can generate a stable field. We could alter the photons with phase discriminators.
+
+$$
+y = \text{Something} + \beta_1 x_1
+$$
 
 ## Subsection
 
@@ -72,3 +89,17 @@ par(mar = c(0, 0, 0, 0))
 plot(x = seq(1:n_lights), y = rep(1, 4), col = "darkgoldenrod1", 
      pch = 8, cex = 4, axes = TRUE, ann = FALSE, xlab = FALSE, ylab = FALSE)
 ```
+
+## Other heading
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+
+### Third
+
+inventore veritatis^[Thing] et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,^[Another thing] 
+
+qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+
+#### A 4th level heading
+
+qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
