@@ -65,6 +65,14 @@ $endfor$
 
 \date{}
 
+
+% Typeset URLs in the same font as their parent environment
+%
+% This has to come at the end of the preamble, after any biblatex stuff because 
+% some biblatex styles (like APA) define their own \urlstyle{}
+\usepackage{url}
+\urlstyle{same}
+
 % ---------------------------
 % END END-OF-PREAMBLE STUFF
 % ---------------------------
