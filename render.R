@@ -1,25 +1,21 @@
+library(tidyverse)
 library(quarto)
 
-quarto_render(
-  input = "hikmah-testing-default.qmd",
-  output_format = "hikmah-pdf",
-  output_file = "hikmah-testing-default.pdf"
+files_to_render <- tribble(
+  ~file,                    ~format,                  ~ext,  ~suffix,
+  "hikmah-testing-default", "hikmah-pdf",             "pdf", "",
+  "hikmah-testing-default", "hikmah-manuscript-pdf",  "pdf", "-manuscript",
+  "hikmah-testing-default", "hikmah-manuscript-docx", "docx", "-manuscript",
+  "hikmah-testing-custom",  "hikmah-pdf",             "pdf", "",
+  "hikmah-testing-custom",  "hikmah-manuscript-pdf",  "pdf", "-manuscript"
 )
 
-quarto_render(
-  input = "hikmah-testing-default.qmd",
-  output_format = "hikmah-manuscript-pdf",
-  output_file = "hikmah-testing-manuscript-default.pdf"
-)
-
-quarto_render(
-  input = "hikmah-testing-custom.qmd",
-  output_format = "hikmah-pdf",
-  output_file = "hikmah-testing-custom.pdf"
-)
-
-quarto_render(
-  input = "hikmah-testing-custom.qmd",
-  output_format = "hikmah-manuscript-pdf",
-  output_file = "hikmah-testing-manuscript-custom.pdf"
-)
+rendered_files <- files_to_render %>% 
+  rowwise() %>% 
+  mutate(rendered = pmap(list(file, format, suffix, ext), ~{
+    quarto_render(
+      input = paste0(file, ".qmd"),
+      output_format = format,
+      output_file = paste0(file, suffix, ".", ext)
+    )
+  }))

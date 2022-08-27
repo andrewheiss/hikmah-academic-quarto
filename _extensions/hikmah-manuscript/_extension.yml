@@ -5,6 +5,15 @@ contributes:
   formats:
     common:
       date-format: full
+    docx:
+      reference-doc: "styles/reference.docx"
+      knitr:
+        opts_chunk:
+          dev: "png"
+          dev-args:
+            - "cairo-png"
+          dpi: 300
+          out.width: "80%"
     pdf:
       documentclass: article
       papersize: letter
