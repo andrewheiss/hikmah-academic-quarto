@@ -8,10 +8,20 @@
 % Indent size
 \setlength{\parindent}{1pc}  % 1p0
 
+% Fix widows and orphans
+\usepackage[all,defaultlines=2]{nowidow}
+
+% List things
+\usepackage{enumitem}
+% Same document-level indentation for ordered and ordered lists
+\setlist[1]{labelindent=\parindent}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
 % Wrap definition list terms
 % https://tex.stackexchange.com/a/9763/11851
-\usepackage{enumitem}
 \setlist[description]{style=unboxed}
+
 
 % For better TOCs
 \usepackage{tocloft}
