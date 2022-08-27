@@ -43,8 +43,8 @@ quarto use template andrewheiss/hikmah-academic-quarto
 - Default version of `template.qmd`:
   - [template.qmd](template.qmd)
   - Fancy PDF version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
-  - Manuscripty double spaced version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-manuscript-default.pdf)
+  - Manuscripty double spaced version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default-manuscript.pdf)
 - Custom fonts + `biblatex-chicago`:
   - [hikmah-testing-custom.qmd](hikmah-testing-custom.qmd)
   - Fancy PDF version: [examples/hikmah-testing-custom.pdf](examples/hikmah-testing-custom.pdf)
-  - Manuscripty double spaced version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-manuscript-custom.pdf)
+  - Manuscripty double spaced version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-custom-manuscript.pdf)
