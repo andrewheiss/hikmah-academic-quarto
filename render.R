@@ -2,12 +2,13 @@ library(tidyverse)
 library(quarto)
 
 files_to_render <- tribble(
-  ~file,                    ~format,                  ~ext,  ~suffix,
-  "hikmah-testing-default", "hikmah-pdf",             "pdf", "",
-  "hikmah-testing-default", "hikmah-manuscript-pdf",  "pdf", "-manuscript",
+  ~file,                    ~format,                  ~ext,   ~suffix,
+  "hikmah-testing-default", "hikmah-pdf",             "pdf",  "",
+  "hikmah-testing-default", "hikmah-manuscript-pdf",  "pdf",  "-manuscript",
   "hikmah-testing-default", "hikmah-manuscript-docx", "docx", "-manuscript",
-  "hikmah-testing-custom",  "hikmah-pdf",             "pdf", "",
-  "hikmah-testing-custom",  "hikmah-manuscript-pdf",  "pdf", "-manuscript"
+  "hikmah-testing-default", "hikmah-manuscript-odt",  "odt",  "-manuscript",
+  "hikmah-testing-custom",  "hikmah-pdf",             "pdf",  "",
+  "hikmah-testing-custom",  "hikmah-manuscript-pdf",  "pdf",  "-manuscript"
 )
 
 rendered_files <- files_to_render %>% 

@@ -12,7 +12,7 @@ Eventually this repository will hold all my templates:
 - Manuscripty double-spaced PDF [Done!]
 - Nice fancy HTML [Not here yet]
 - Manuscripty double-spaced Word (.docx) [Done!]
-- Manuscripty double-spaced OpenDocument (.odt) [Not here yet]
+- Manuscripty double-spaced OpenDocument (.odt) [Done!]
 
 This repository is *really* meant as an example of how to create Quarto templates and formats. Fork it, copy it, and adjust it all you want! Use it as a way to learn how to make your own templates.
 
@@ -46,6 +46,8 @@ quarto use template andrewheiss/hikmah-academic-quarto
   - Fancy PDF version: [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
   - Manuscripty double spaced version: [examples/hikmah-testing-default-manuscript.pdf](examples/hikmah-testing-default-manuscript.pdf)
   - Manuscripty double spaced APA-like .docx version: [examples/hikmah-testing-default-manuscript.docx](examples/hikmah-testing-default-manuscript.docx)
+  - Manuscripty double spaced APA-like .odt version (open with [LibreOffice](https://www.libreoffice.org/)): [examples/hikmah-testing-default-manuscript.odt](examples/hikmah-testing-default-manuscript.odt)
+
 - Custom fonts + `biblatex-chicago`:
   - [hikmah-testing-custom.qmd](hikmah-testing-custom.qmd)
   - Fancy PDF version: [examples/hikmah-testing-custom.pdf](examples/hikmah-testing-custom.pdf)

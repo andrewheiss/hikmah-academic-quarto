@@ -1,5 +1,5 @@
 ---
-title: |
+title: |-
   On the Surgical Removal of \
   Cardassian Cranial Implants
 subtitle: A case study of a Cardassian patient
@@ -33,9 +33,9 @@ author:
       - ref: ds9
 abstract: |
   Space: the final frontier. These are the voyages of the starship *Enterprise*. Its continuing mission: to explore strange new worlds. To seek out new life and new civilizations. To boldly go where no one has gone before!
-thanks: |
+thanks: |-
   Placeholder text generated at <https://vlad-saling.github.io/star-trek-ipsum/>.
-additional-info: |
+additional-info: |-
   We have no known conflict of interest to disclose.
 keywords:
   - surgery
@@ -44,14 +44,15 @@ keywords:
 date: August 24, 2022
 epigraph:
   - text: War is good for business. 
-    source: Ferengi Rule of Aquisition 34
+    source: Ferengi Rule of Acquisition 34
   - text: Peace is good for business. 
-    source: Ferengi Rule of Aquisition 35
+    source: Ferengi Rule of Acquisition 35
 bibliography: references.bib
 format:
   hikmah-pdf: default
-  hikmah-manuscript-pdf: default
   hikmah-manuscript-docx: default
+  hikmah-manuscript-odt: default
+  hikmah-manuscript-pdf: default
 ---
 
 We're acquainted with the wormhole phenomenon, but this... Is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times [@Lovelace:1842]. This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.

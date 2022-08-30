@@ -14,6 +14,16 @@ contributes:
             - "cairo-png"
           dpi: 300
           out.width: "80%"
+    odt:
+      template: "templates/odt-manuscript.odt"
+      reference-doc: "styles/reference.odt"
+      knitr:
+        opts_chunk:
+          dev: "png"
+          dev-args:
+            - "cairo-png"
+          dpi: 300
+          out.width: "80%"
     pdf:
       documentclass: article
       papersize: letter
