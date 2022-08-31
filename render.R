@@ -34,7 +34,7 @@ thumbify <- function(ext, rendered, thumbnail_name) {
     outdir_temp <- tempdir()
     system2("/Applications/LibreOffice.app/Contents/MacOS/soffice",
             c("--headless", "--convert-to", "pdf:writer_pdf_Export",
-              paste0("examples/", x$rendered), "--outdir", outdir_temp))
+              paste0("examples/", rendered), "--outdir", outdir_temp))
     
     to_convert <- paste0(outdir_temp, "/", tools::file_path_sans_ext(basename(rendered)), ".pdf")
   } else {

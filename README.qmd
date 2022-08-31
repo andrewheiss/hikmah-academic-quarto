@@ -88,7 +88,7 @@ knitr::include_graphics("examples/thumbnails/hikmah-testing-custom-pdf.png", dpi
 knitr::include_graphics("examples/thumbnails/hikmah-testing-default-manuscript-pdf.png", dpi = 600)
 ```
 
-### Manuscripty PDF, `biblatex-chicago`
+### Manuscripty PDF, custom fonts + `biblatex-chicago`
 
 ```{r fig.width=4, out.width="100%", echo=FALSE}
 #| fig-link: examples/thumbnails/hikmah-testing-custom-manuscript-pdf.png
