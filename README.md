@@ -33,7 +33,7 @@ it as a way to learn how to make your own templates.
 Run this command to install the templates in your Quarto project:
 
 ``` bash
-quarto use template andrewheiss/hikmah-academic-quarto
+quarto add andrewheiss/hikmah-academic-quarto
 ```
 
 ## Features
@@ -98,7 +98,7 @@ style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-p
 
 </div>
 
-### Manuscripty PDF, `biblatex-chicago`
+### Manuscripty PDF, custom fonts + `biblatex-chicago`
 
 <div>
 

@@ -35,7 +35,7 @@ This repository is *really* meant as an example of how to create Quarto template
 Run this command to install the templates in your Quarto project:
 
 ```bash
-quarto use template andrewheiss/hikmah-academic-quarto
+quarto add andrewheiss/hikmah-academic-quarto
 ```
 
 ## Features
