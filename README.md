@@ -33,7 +33,7 @@ it as a way to learn how to make your own templates.
 Run this command to install the templates in your Quarto project:
 
 ``` bash
-quarto add andrewheiss/hikmah-academic-quarto
+quarto install extension andrewheiss/hikmah-academic-quarto
 ```
 
 ## Features
