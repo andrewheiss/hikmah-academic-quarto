@@ -37,7 +37,7 @@ $if(correspondence-prefix)$
 
 $for(by-author)$
 $if(it.attributes.corresponding)$
-\par\raggedright\setlength{\parindent}{0.5in}$correspondence-prefix$~$it.name.literal$$if(it.affiliations)$, $for(it.affiliations)$$if(it.department)$$it.department$, $endif$$it.name$, $if(it.address)$$it.address$, $endif$$if(it.city)$$it.city$, $endif$$if(it.region)$$it.region$ $endif$$if(it.postal-code)$$it.postal-code$$endif$$if(it.country)$, $it.country$$endif$$sep$; $endfor$ $endif$
+\par\raggedright\setlength{\parindent}{0.5in}$correspondence-prefix$~$it.name.literal$$if(it.email)$ (\href{mailto:$it.email$}{$it.email$})$endif$$if(it.affiliations)$, $for(it.affiliations)$$if(it.department)$$it.department$, $endif$$it.name$, $if(it.address)$$it.address$, $endif$$if(it.city)$$it.city$, $endif$$if(it.region)$$it.region$ $endif$$if(it.postal-code)$$it.postal-code$$endif$$if(it.country)$, $it.country$$endif$$sep$; $endfor$ $endif$
 $endif$
 $endfor$
 
