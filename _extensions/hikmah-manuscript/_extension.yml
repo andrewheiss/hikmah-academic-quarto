@@ -1,6 +1,6 @@
-title: Hikma Manuscript
+title: Hikmah Manuscript
 author: Andrew Heiss
-version: 0.0.1
+version: 0.0.2
 contributes:
   formats:
     common:
@@ -9,9 +9,7 @@ contributes:
       reference-doc: "styles/reference.docx"
       knitr:
         opts_chunk:
-          dev: "png"
-          dev-args:
-            - "cairo-png"
+          dev: "ragg_png"
           dpi: 300
           out.width: "80%"
     odt:
@@ -19,9 +17,7 @@ contributes:
       reference-doc: "styles/reference.odt"
       knitr:
         opts_chunk:
-          dev: "png"
-          dev-args:
-            - "cairo-png"
+          dev: "ragg_png"
           dpi: 300
           out.width: "80%"
     pdf:

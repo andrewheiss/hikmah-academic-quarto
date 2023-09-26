@@ -33,7 +33,7 @@ it as a way to learn how to make your own templates.
 Run this command to install the templates in your Quarto project:
 
 ``` bash
-quarto install extension andrewheiss/hikmah-academic-quarto
+quarto add andrewheiss/hikmah-academic-quarto
 ```
 
 ## Features
@@ -73,55 +73,31 @@ quarto install extension andrewheiss/hikmah-academic-quarto
 
 ### Fancy PDF, default settings
 
-<div>
-
 [<img src="examples/thumbnails/hikmah-testing-default-pdf.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-pdf.png)
 
-</div>
-
 ### Fancy PDF, custom fonts + `biblatex-chicago`
-
-<div>
 
 [<img src="examples/thumbnails/hikmah-testing-custom-pdf.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-custom-pdf.png)
 
-</div>
-
 ### Manuscripty PDF, default settings
-
-<div>
 
 [<img src="examples/thumbnails/hikmah-testing-default-manuscript-pdf.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-pdf.png)
 
-</div>
-
 ### Manuscripty PDF, custom fonts + `biblatex-chicago`
-
-<div>
 
 [<img src="examples/thumbnails/hikmah-testing-custom-manuscript-pdf.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-custom-manuscript-pdf.png)
 
-</div>
-
 ### Manuscripty Word (.docx), default settings
-
-<div>
 
 [<img
 src="examples/thumbnails/hikmah-testing-default-manuscript-docx.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-docx.png)
 
-</div>
-
 ### Manuscripty OpenDocument (.odt), default settings
-
-<div>
 
 [<img src="examples/thumbnails/hikmah-testing-default-manuscript-odt.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-odt.png)
-
-</div>
