@@ -96,6 +96,44 @@
 \usepackage[font=normalsize]{caption}
 
 
+% --------
+% Macros
+% --------
+% pandoc will not convert text within \begin{} XXX \end{} to Markdown and will
+% treat it as regular TeX. Because of this, it's impossible to do stuff like
+% this:
+
+% \begin{landscape}
+%
+% | One | Two   |
+% |-----+-------|
+% | my  | table |
+% | is  | nice  |
+%
+% \end{landscape}
+%
+% Since it'll render like: | One | Two | |—–+——-| | my | table | | is | nice |
+% 
+% BUT, from this http://stackoverflow.com/a/41945462/120898 we can get around
+% this by creating new commands for \begin and \end, like this:
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+% \blandscape
+%
+% | One | Two   |
+% |-----+-------|
+% | my  | table |
+% | is  | nice  |
+%
+% \elandscape
+
+% Same thing, but for generic groups
+% But can't use \bgroup and \egroup because those are built-in TeX things
+\newcommand{\stgroup}{\begingroup}
+\newcommand{\fingroup}{\endgroup}
+
+
 % ---------------------------
 % END CUSTOM PREAMBLE STUFF
 % ---------------------------
