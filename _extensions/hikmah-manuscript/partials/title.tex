@@ -108,6 +108,13 @@ $endfor$
 \usepackage{url}
 \urlstyle{same}
 
+
+% Make sure math environments are always single spaced and have a little space after
+\let\oldDisplayMath=\[
+\let\endoldDisplayMath=\]
+\renewcommand{\[}{\begin{singlespace}\oldDisplayMath}
+\renewcommand{\]}{\endoldDisplayMath\end{singlespace}\vspace{\baselineskip}}
+
 % ---------------------------
 % END END-OF-PREAMBLE STUFF
 % ---------------------------
