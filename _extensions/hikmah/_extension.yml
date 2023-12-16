@@ -1,6 +1,6 @@
 title: Hikmah
 author: Andrew Heiss
-version: 0.0.2
+version: 0.0.3
 contributes:
   formats:
     common:
@@ -44,3 +44,5 @@ contributes:
       indent: true
     html:
       theme: styles/pretty.scss
+      template-partials:
+        - "partials/title-block.html"

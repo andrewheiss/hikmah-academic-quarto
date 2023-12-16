@@ -1,0 +1,35 @@
+<header id="title-block-header">
+$if(title)$<h1 class="title">HEYYY $title$</h1>$endif$
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+
+$if(date)$
+<p class="date">$date$</p>
+$endif$
+$if(abstract)$
+<div class="abstract">
+<div class="abstract-title">$abstract-title$</div>
+$abstract$
+</div>
+$endif$
+</header>
+$if(epigraph)$
+<div class="epigraph-wrapper clearfix">
+<figure class="text-end w-50 float-end">
+$for(epigraph)$
+  <blockquote class="blockquote">
+    <p>$epigraph.text$</p>
+  </blockquote>
+  $if(epigraph.source)$
+  <figcaption class="blockquote-footer">
+    $epigraph.source$
+  </figcaption>
+  $endif$
+$endfor$
+</figure>
+</div>
+$endif$
