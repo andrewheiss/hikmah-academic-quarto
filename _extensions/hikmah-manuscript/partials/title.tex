@@ -5,6 +5,25 @@
 % For patching commands like \subtitle
 \usepackage{etoolbox}
 
+
+$if(left-aligned)$
+% -----------
+% Epigraphs
+% -----------
+\usepackage[document]{ragged2e}
+\setlength{\RaggedRightParindent}{\parindent}
+\setlength{\RaggedRightRightskip}{0pt plus 3em}
+$endif$
+
+$if(endnotes)$
+% ----------
+% Endnotes
+% ----------
+\usepackage{endnotes}
+\renewcommand{\enotesize}{\normalsize}
+\let\footnote=\endnote
+$endif$
+
 % -----------------
 % Running headers
 % -----------------
