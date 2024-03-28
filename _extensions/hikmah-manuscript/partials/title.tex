@@ -7,12 +7,16 @@
 
 
 $if(left-aligned)$
-% -----------
-% Epigraphs
-% -----------
+% -----------------------
+% Left aligned settings
+% -----------------------
 \usepackage[document]{ragged2e}
 \setlength{\RaggedRightParindent}{\parindent}
 \setlength{\RaggedRightRightskip}{0pt plus 3em}
+
+% That also affects all the captions, so this forces them to be unindented
+\AtBeginEnvironment{figure}{\setlength{\RaggedRightParindent}{0pt}}
+\AtBeginEnvironment{table}{\setlength{\RaggedRightParindent}{0pt}}
 $endif$
 
 $if(endnotes)$
