@@ -17,6 +17,9 @@ $if(left-aligned)$
 % That also affects all the captions, so this forces them to be unindented
 \AtBeginEnvironment{figure}{\setlength{\RaggedRightParindent}{0pt}}
 \AtBeginEnvironment{table}{\setlength{\RaggedRightParindent}{0pt}}
+\AtBeginEnvironment{longtable}{\setlength{\RaggedRightParindent}{0pt}}  % Longtables
+\AtBeginEnvironment{apptbl}{\setlength{\RaggedRightParindent}{0pt}}  % My custom appendix section
+\AtBeginEnvironment{tcolorbox}{\setlength{\RaggedRightParindent}{0pt}}  % Quarto callouts
 $endif$
 
 $if(endnotes)$
