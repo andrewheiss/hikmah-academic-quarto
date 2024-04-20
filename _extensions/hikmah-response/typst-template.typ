@@ -3,9 +3,7 @@
     fill: rgb("$color-reviewer$"), size: 0.92em, style: "italic"
   )
 
-  #block(inset: (x: 2em, y: 1em))[
-    #body
-  ]
+  #block(inset: (x: 2em), spacing: 2em, body)
 ]
 
 #let excerpt(body) = [
@@ -13,9 +11,7 @@
     fill: rgb("$color-excerpt$"), size: 0.92em
   )
   
-  #block(inset: (x: 2em, y: 1em))[
-    #body
-  ]
+  #block(inset: (x: 2em), spacing: 2em, body)
 ]
 
 #let reviewer-inline(x) = text(rgb("$color-reviewer$"), style: "italic", x)
@@ -53,7 +49,7 @@
 
   if title != none {
     align(left)[#block(inset: (bottom: 1em))[
-      #text(weight: "bold", size: 1.5em)[#title]
+      #text(weight: "bold", size: 1.4em)[#title]
     ]]
   }
   
