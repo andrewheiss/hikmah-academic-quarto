@@ -19,13 +19,11 @@ knitr::opts_chunk$set(
 
 I've been using custom LaTeX templates (based in part on [Kieran Healy's template](https://github.com/kjhealy/latex-custom-kjh)) for years. With the advent of Quarto, I decided to clean up [my templates](https://github.com/andrewheiss/portable-pandoc-magic), simplify them, and Quarto-ify them. Yay.
 
-Eventually this repository will hold all my templates:
-
-- Nice fancy PDF (`hikmah-pdf`) [Done!]
-- Manuscripty double-spaced PDF (`hikmah-manuscript-pdf`) [Done!]
-- Nice fancy HTML [Not here yet]
-- Manuscripty double-spaced Word (`hikmah-manuscript-docx`) [Done!]
-- Manuscripty double-spaced OpenDocument (`hikmah-manuscript-pdf`) [Done!]
+- Nice fancy PDF (`hikmah-pdf`)
+- Manuscripty double-spaced PDF (`hikmah-manuscript-pdf`)
+- Manuscripty double-spaced Word (`hikmah-manuscript-docx`)
+- Manuscripty double-spaced OpenDocument (`hikmah-manuscript-pdf`)
+- Reviewer response memo (`hikmah-response-typst`)
 
 This repository is *really* meant as an example of how to create Quarto templates and formats. Fork it, copy it, and adjust it all you want! Use it as a way to learn how to make your own templates.
 
@@ -107,4 +105,11 @@ knitr::include_graphics("examples/thumbnails/hikmah-testing-default-manuscript-d
 ```{r fig.width=4, out.width="100%", echo=FALSE}
 #| fig-link: examples/thumbnails/hikmah-testing-default-manuscript-odt.png
 knitr::include_graphics("examples/thumbnails/hikmah-testing-default-manuscript-odt.png", dpi = 600)
+```
+
+### Reviewer response memo, default settings
+
+```{r fig.width=4, out.width="100%", echo=FALSE}
+#| fig-link: examples/thumbnails/hikmah-response-memo-pdf.png
+knitr::include_graphics("examples/thumbnails/hikmah-response-memo-pdf.png", dpi = 600)
 ```

@@ -2,3 +2,5 @@
 .Rproj.user
 .Rhistory
 /.quarto/
+
+/.luarc.json

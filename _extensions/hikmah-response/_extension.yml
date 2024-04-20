@@ -1,0 +1,19 @@
+title: Hikmah Response
+author: Andrew Heiss
+version: 0.0.1
+quarto-required: ">=1.4.11"
+contributes:
+  formats:
+    common:
+      date-format: long
+    typst:
+      # These have to be defined as hex codes *without* the # prefix
+      color-reviewer: "dd5129"
+      color-excerpt: "0f7ba2"
+      template-partials: 
+        - typst-template.typ
+      include-in-header:
+        - include-in-header.typ
+      filters:
+        - response.lua
+

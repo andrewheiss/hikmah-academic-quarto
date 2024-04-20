@@ -1,4 +1,5 @@
 
+
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
 # Hikmah Quarto templates
@@ -15,14 +16,11 @@ the advent of Quarto, I decided to clean up [my
 templates](https://github.com/andrewheiss/portable-pandoc-magic),
 simplify them, and Quarto-ify them. Yay.
 
-Eventually this repository will hold all my templates:
-
-- Nice fancy PDF (`hikmah-pdf`) \[Done!\]
-- Manuscripty double-spaced PDF (`hikmah-manuscript-pdf`) \[Done!\]
-- Nice fancy HTML \[Not here yet\]
-- Manuscripty double-spaced Word (`hikmah-manuscript-docx`) \[Done!\]
+- Nice fancy PDF (`hikmah-pdf`)
+- Manuscripty double-spaced PDF (`hikmah-manuscript-pdf`)
+- Manuscripty double-spaced Word (`hikmah-manuscript-docx`)
 - Manuscripty double-spaced OpenDocument (`hikmah-manuscript-pdf`)
-  \[Done!\]
+- Reviewer response memo (`hikmah-response-typst`)
 
 This repository is *really* meant as an example of how to create Quarto
 templates and formats. Fork it, copy it, and adjust it all you want! Use
@@ -101,3 +99,8 @@ style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-d
 
 [<img src="examples/thumbnails/hikmah-testing-default-manuscript-odt.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-odt.png)
+
+### Reviewer response memo, default settings
+
+[<img src="examples/thumbnails/hikmah-response-memo-pdf.png"
+style="width:100.0%" />](examples/thumbnails/hikmah-response-memo-pdf.png)

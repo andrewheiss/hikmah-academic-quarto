@@ -1,0 +1,43 @@
+---
+title: Responses to editor and reviewer concerns
+format:
+  hikmah-response-typst: default
+---
+
+Thank you for giving us the opportunity to revise and resubmit our manuscript, "On the Surgical Removal of Cardassian Cranial Implants: A case study of a Cardassian patient" (Manuscript ID SMJ-R-2373-0023). We found the Editor's and the Reviewers' comments to be very insightful and helpful and we have used these comments to significantly rewrite and improve the manuscript in a number of ways. In this memo, we describe how we have revised the paper in response to these comments. The Editor's and Reviewers' comments are cited or summarized in [red italicized text]{.memo-reviewer-inline}, and our responses are in black Roman text. We include excerpts from our revised manuscript in [blue]{.memo-excerpt-inline}.
+
+# Editor's broader concerns
+
+::: {.memo-reviewer}
+***Editor***: Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
+:::
+
+We appreciate the editor's help in reframing our paper. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+::: {.memo-excerpt}
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+:::
+
+# Reviewer 2
+
+::: {.memo-reviewer}
+***Reviewer 2***: This is the worst paper I have ever read.
+:::
+
+why are you so mean :(
+
+::: {.memo-excerpt}
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+:::
+
+---
+
+::: {.memo-reviewer}
+***Reviewer 2***: Seriously, you should never research again.
+:::
+
+why are you so mean :(
+
+::: {.memo-excerpt}
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+:::
