@@ -47,9 +47,12 @@ contributes:
       citecolor: DarkSlateBlue
       link-citations: true
 
+      cite-method: citeproc  # Use citeproc by default; this can also be "biblatex"
+      reference-section-title: "References"
+      
+      # Settings for when cite-method: biblatex
       biblio-title: "References"
       biblio-config: false  # Don't use the default template's biblatex commands
-      cite-method: biblatex
       biblatex-chicago: false  # Custom flag for enabling biblatex-chicago
       biblio-style: apa
       biblatexoptions:

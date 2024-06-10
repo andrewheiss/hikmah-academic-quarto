@@ -30,6 +30,9 @@
 % https://tex.stackexchange.com/a/378190/11851
 \AtBeginEnvironment{longtable}{\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-\baselineskip}, after=\vspace*{-\baselineskip}}}
 
+% Allow for /singlespacing and /doublespacing
+\usepackage{setspace}
+
 
 % -----------------
 % Title block stuff
@@ -114,7 +117,7 @@
 % -----------
 % Footnotes
 % -----------
-% NB: footmisc has to come after biblatex because of conflicts
+% NB: footmisc has to come after setspace and biblatex because of conflicts
 \usepackage[bottom, flushmargin]{footmisc}
 \renewcommand*{\footnotelayout}{\footnotesize}
 

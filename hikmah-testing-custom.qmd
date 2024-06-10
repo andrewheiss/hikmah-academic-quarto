@@ -156,7 +156,7 @@ omnis dolor repellendus.
 2. sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
 3. ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 
-::: {.content-visible when-format="pdf"}
+::: {.content-visible when-meta="endnotes"}
 ```{=latex}
 \newpage
 \begingroup

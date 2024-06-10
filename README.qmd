@@ -40,7 +40,7 @@ quarto add andrewheiss/hikmah-academic-quarto
 
 (will be documented better soon!)
 
-- Bibliography generation with both `biblatex` and `biblatex-chicago`
+- Bibliography generation with either (1) `citeproc` or (2) `biblatex` and `biblatex-chicago`
 - Support for Quarto's complex [author/affiliation schema](https://quarto.org/docs/journals/authors.html)
 - Fancy title block
 - Epigraphs

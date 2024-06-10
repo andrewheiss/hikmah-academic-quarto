@@ -37,6 +37,9 @@
 % Indent all first paragraphs because APA wants that
 \usepackage{indentfirst}
 
+% Allow for /singlespacing and /doublespacing
+\usepackage{setspace}
+
 
 % -----------------
 % Title block stuff
@@ -82,7 +85,7 @@
 % -----------
 % Footnotes
 % -----------
-% NB: footmisc has to come after biblatex because of conflicts
+% NB: footmisc has to come after setspace and biblatex because of conflicts
 \usepackage[bottom]{footmisc}
 \renewcommand*{\footnotelayout}{\footnotesize}
 
