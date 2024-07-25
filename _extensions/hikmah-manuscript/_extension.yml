@@ -1,6 +1,6 @@
 title: Hikmah Manuscript
 author: Andrew Heiss
-version: 0.0.12
+version: 0.0.13
 quarto-required: ">=1.4.11"
 contributes:
   formats:
@@ -49,7 +49,6 @@ contributes:
       link-citations: true
 
       cite-method: citeproc  # Use citeproc by default; this can also be "biblatex"
-      reference-section-title: "References"
       
       # Settings for when cite-method: biblatex
       biblio-title: "References"
