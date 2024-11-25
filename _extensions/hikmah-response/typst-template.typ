@@ -14,6 +14,14 @@
   #block(inset: (x: 2em), spacing: 2em, body)
 ]
 
+#let footnote-excerpt(body) = [
+  #set text(
+    fill: rgb("$color-excerpt$"), size: 0.84em
+  )
+  
+  #block(inset: (x: 2em), spacing: 2em, body)
+]
+
 #let reviewer-inline(x) = text(rgb("$color-reviewer$"), style: "italic", x)
 #let excerpt-inline(x) = text(rgb("$color-excerpt$"), x)
 

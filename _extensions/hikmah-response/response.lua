@@ -22,6 +22,12 @@ function Div(el)
         })
         blocks:extend(el.content)
         return endTypstBlock(blocks)
+    elseif el.classes:includes('memo-footnote-excerpt') then
+        local blocks = pandoc.List({
+            pandoc.RawBlock('typst', '#footnote-excerpt[')
+        })
+        blocks:extend(el.content)
+        return endTypstBlock(blocks)
     end
 end
 
