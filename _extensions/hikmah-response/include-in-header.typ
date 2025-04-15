@@ -9,10 +9,9 @@
 
 #set par(
   first-line-indent: 1em,
-  justify: true
+  justify: true,
+  spacing: 0.65em
 )
-
-#show par: set block(spacing: 0.65em)
 
 #show heading: set block(above: 2em, below: 1em)
 

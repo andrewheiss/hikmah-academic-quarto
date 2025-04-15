@@ -38,6 +38,7 @@
   font: (),
   fontsize: 11pt,
   sectionnumbering: none,
+  pagenumbering: "1",
   toc: false,
   toc_title: none,
   toc_depth: none,
