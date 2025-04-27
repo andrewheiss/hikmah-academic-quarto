@@ -33,18 +33,6 @@ $for(keywords/allbutlast)$$keywords$\sep $endfor$
 $for(keywords/last)$$keywords$$endfor$
 \end{keywords}
 $endif$
-
-$if(epigraph)$
-$for(epigraph)$
-$if(epigraph.source)$
-\epigraph{$epigraph.text$}{---$epigraph.source$}
-$else$
-\epigraph{$epigraph.text$}
-$endif$
-$endfor$
-$endif$
 % -------------------
 % END TITLE SECTION
 % -------------------
-
-

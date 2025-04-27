@@ -17,19 +17,3 @@ $abstract$
 </div>
 $endif$
 </header>
-$if(epigraph)$
-<div class="epigraph-wrapper clearfix">
-<figure class="text-end w-50 float-end">
-$for(epigraph)$
-  <blockquote class="blockquote">
-    <p>$epigraph.text$</p>
-  </blockquote>
-  $if(epigraph.source)$
-  <figcaption class="blockquote-footer">
-    $epigraph.source$
-  </figcaption>
-  $endif$
-$endfor$
-</figure>
-</div>
-$endif$

@@ -38,11 +38,14 @@ quarto add andrewheiss/hikmah-academic-quarto
 
 (will be documented better soon!)
 
-- Bibliography generation with both `biblatex` and `biblatex-chicago`
+- Bibliography generation with either (1) `citeproc` or (2) `biblatex`
+  and `biblatex-chicago`
 - Support for Quarto’s complex [author/affiliation
   schema](https://quarto.org/docs/journals/authors.html)
 - Fancy title block
-- Epigraphs
+- ~~Epigraphs~~ Use
+  [`fancy-epigraphs`](https://github.com/andrewheiss/fancy-epigraphs-quarto)
+  for epigraph support
 - Title page in manuscripty PDF
 - Ability to move floats and notes to the end of the document in
   manuscripty PDF

@@ -89,18 +89,6 @@ $endif$
 \textbf{$title$$if(subtitle)$:\\$subtitle$$endif$}
 \end{center}
 
-$if(epigraph)$
-$for(epigraph)$
-$if(epigraph.source)$
-\epigraph{$epigraph.text$}{---$epigraph.source$}
-$else$
-\epigraph{$epigraph.text$}
-$endif$
-$endfor$
-$endif$
-
 % -------------------
 % END TITLE SECTION
 % -------------------
-
-

@@ -69,19 +69,6 @@ $if(subtitle)$
 <text:p text:style-name="Subtitle">$subtitle$</text:p>
 $endif$
 
-$if(epigraph)$
-  $for(epigraph)$
-    $if(epigraph.source)$
-    <text:p text:style-name="Epigraph">$epigraph.text$</text:p>
-    <text:p text:style-name="Epigraph source">—$epigraph.source$</text:p>
-    <text:p text:style-name="Epigraph"></text:p>
-    $else$
-    <text:p text:style-name="Epigraph">$epigraph.text$</text:p>
-    <text:p text:style-name="Epigraph"></text:p>
-    $endif$
-  $endfor$
-$endif$
-
 $for(include-before)$
 $include-before$
 $endfor$
