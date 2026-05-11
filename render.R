@@ -2,15 +2,21 @@ library(tidyverse)
 library(quarto)
 library(magick)
 
+dir.create("examples/thumbnails", showWarnings = FALSE, recursive = TRUE)
+
 files_to_render <- tribble(
-  ~file,                    ~format,                  ~ext,   ~suffix,
-  "hikmah-testing-default", "hikmah-pdf",             "pdf",  "",
-  "hikmah-testing-default", "hikmah-manuscript-pdf",  "pdf",  "-manuscript",
-  "hikmah-testing-default", "hikmah-manuscript-docx", "docx", "-manuscript",
-  "hikmah-testing-default", "hikmah-manuscript-odt",  "odt",  "-manuscript",
-  "hikmah-testing-custom",  "hikmah-pdf",             "pdf",  "",
-  "hikmah-testing-custom",  "hikmah-manuscript-pdf",  "pdf",  "-manuscript",
-  "hikmah-response-memo",   "hikmah-response-typst",  "pdf",  ""
+  ~file,                    ~format,                   ~ext,   ~suffix,
+  "hikmah-testing-default", "hikmah-pdf",              "pdf",  "",
+  "hikmah-testing-default", "hikmah-typst",            "pdf",  "-typst",
+  "hikmah-testing-default", "hikmah-manuscript-pdf",   "pdf",  "-manuscript",
+  "hikmah-testing-default", "hikmah-manuscript-typst", "pdf",  "-manuscript-typst",
+  "hikmah-testing-default", "hikmah-manuscript-docx",  "docx", "-manuscript",
+  "hikmah-testing-default", "hikmah-manuscript-odt",   "odt",  "-manuscript",
+  "hikmah-testing-custom",  "hikmah-pdf",              "pdf",  "",
+  "hikmah-testing-custom",  "hikmah-typst",            "pdf",  "-typst",
+  "hikmah-testing-custom",  "hikmah-manuscript-pdf",   "pdf",  "-manuscript",
+  "hikmah-testing-custom",  "hikmah-manuscript-typst", "pdf",  "-manuscript-typst",
+  "hikmah-response-memo",   "hikmah-response-typst",   "pdf",  ""
 )
 
 rendered_files <- files_to_render %>% 
@@ -43,8 +49,10 @@ thumbify <- function(ext, rendered, thumbnail_name) {
   }
   
   # Convert each rendered PDF to a collage and save as PNG
-  image_read_pdf(to_convert) %>% 
-    image_montage(geometry = "x2000+25+35", tile = "3", bg = "grey92", shadow = TRUE) %>% 
+  # Limit to 9 pages (3×3 grid) to avoid memory crashes on long documents
+  image_read_pdf(to_convert) %>%
+    head(9) %>%
+    image_montage(geometry = "x1000+15+20", tile = "3", bg = "grey92", shadow = TRUE) %>%
     image_convert(format = "png") %>%
     image_write(paste0("examples/thumbnails/", thumbnail_name, ".png"))
   
@@ -52,7 +60,7 @@ thumbify <- function(ext, rendered, thumbnail_name) {
 }
 
 # Create thumbnail collages for each rendered file
-thumbified_files <- rendered_files %>% 
+thumbified_files <- rendered_files %>%
   rowwise() %>% 
   mutate(thumbnail = pmap_chr(list(ext, rendered, thumbnail_name), ~{
     thumbify(ext, rendered, thumbnail_name)

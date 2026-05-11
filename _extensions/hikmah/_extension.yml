@@ -1,11 +1,29 @@
 title: Hikmah
 author: Andrew Heiss
-version: 0.0.9
-quarto-required: ">=1.4.11"
+version: 0.1.0
+quarto-required: ">=1.8"
 contributes:
   formats:
     common:
       date-format: full
+
+    typst:
+      citeproc: true
+
+      link-citations: true
+      linkcolor: "#483D8B"
+      citecolor: "#483D8B"
+
+      template-partials:
+        - "partials/typst-show.typ"
+        - "partials/typst-template.typ"
+      
+      margin:
+        top: 120pt    # 10p0
+        bottom: 120pt #10p0
+        left: 132pt   # 11p0
+        right: 132pt  # 11p0
+
     pdf:
       # Template pieces
       template-partials:
@@ -45,6 +63,7 @@ contributes:
       block-headings: false
       # Indent paragraphs instead of adding space between them
       indent: true
+
     html:
       theme: styles/pretty.scss
       template-partials:
