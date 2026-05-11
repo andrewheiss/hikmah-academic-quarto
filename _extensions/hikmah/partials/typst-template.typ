@@ -91,19 +91,19 @@
 
   show heading.where(level: 1): it => {
     set text(size: fontsize * 1.25, weight: "bold")
-    set block(above: 1.5em, below: 0.65em)
+    set block(above: 2.5em, below: 0.65em)
     it
   }
 
   show heading.where(level: 2): it => {
     set text(size: fontsize * 1.1, weight: "bold")
-    set block(above: 1.3em, below: 0.65em)
+    set block(above: 2.3em, below: 0.65em)
     it
   }
 
   show heading.where(level: 3): it => {
     set text(size: fontsize * 0.95, weight: "bold")
-    set block(above: 1em, below: 0.65em)
+    set block(above: 2em, below: 0.65em)
     it
   }
 
