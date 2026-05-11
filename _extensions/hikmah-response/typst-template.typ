@@ -35,7 +35,7 @@
   paper: "us-letter",
   lang: "en",
   region: "US",
-  font: (),
+  font: none,
   fontsize: 11pt,
   sectionnumbering: none,
   pagenumbering: "1",
@@ -50,10 +50,8 @@
     numbering: "1",
   )
   set par(justify: true)
-  set text(lang: lang,
-           region: region,
-           font: font,
-           size: fontsize)
+  set text(lang: lang, region: region, size: fontsize)
+  if font != none { set text(font: font) }
   set heading(numbering: sectionnumbering)
 
   if title != none {

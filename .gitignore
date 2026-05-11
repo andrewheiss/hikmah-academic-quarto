@@ -5,3 +5,5 @@
 *.ent
 
 /.luarc.json
+
+**/*.quarto_ipynb

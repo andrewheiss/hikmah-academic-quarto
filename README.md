@@ -17,10 +17,13 @@ templates](https://github.com/andrewheiss/portable-pandoc-magic),
 simplify them, and Quarto-ify them. Yay.
 
 - Nice fancy PDF (`hikmah-pdf`)
+- Nice fancy PDF through Typst (`hikmah-typst`)
 - Manuscripty double-spaced PDF (`hikmah-manuscript-pdf`)
+- Manuscripty double-spaced PDF through Typst
+  (`hikmah-manuscript-typst`)
 - Manuscripty double-spaced Word (`hikmah-manuscript-docx`)
 - Manuscripty double-spaced OpenDocument (`hikmah-manuscript-pdf`)
-- Reviewer response memo (`hikmah-response-typst`)
+- Reviewer response memo through Typst (`hikmah-response-typst`)
 
 This repository is *really* meant as an example of how to create Quarto
 templates and formats. Fork it, copy it, and adjust it all you want! Use
@@ -58,8 +61,12 @@ quarto add andrewheiss/hikmah-academic-quarto
   - [template.qmd](template.qmd)
   - Fancy PDF version:
     [examples/hikmah-testing-default.pdf](examples/hikmah-testing-default.pdf)
+  - Fancy PDF version through Typst:
+    [examples/hikmah-testing-default-typst.pdf](examples/hikmah-testing-default-typst.pdf)
   - Manuscripty double spaced version:
     [examples/hikmah-testing-default-manuscript.pdf](examples/hikmah-testing-default-manuscript.pdf)
+  - Manuscripty double spaced version through Typst:
+    [examples/hikmah-testing-default-manuscript-typst.pdf](examples/hikmah-testing-default-manuscript-typst.pdf)
   - Manuscripty double spaced APA-like .docx version:
     [examples/hikmah-testing-default-manuscript.docx](examples/hikmah-testing-default-manuscript.docx)
   - Manuscripty double spaced APA-like .odt version (open with
@@ -69,8 +76,12 @@ quarto add andrewheiss/hikmah-academic-quarto
   - [hikmah-testing-custom.qmd](hikmah-testing-custom.qmd)
   - Fancy PDF version:
     [examples/hikmah-testing-custom.pdf](examples/hikmah-testing-custom.pdf)
+  - Fancy PDF version through Typst:
+    [examples/hikmah-testing-custom-typst.pdf](examples/hikmah-testing-custom-typst.pdf)
   - Manuscripty double spaced version:
     [examples/hikmah-testing-custom-manuscript.pdf](examples/hikmah-testing-custom-manuscript.pdf)
+  - Manuscripty double spaced version through Typst:
+    [examples/hikmah-testing-custom-manuscript-typst.pdf](examples/hikmah-testing-custom-manuscript-typst.pdf)
 
 ### Fancy PDF, default settings
 
@@ -81,6 +92,28 @@ style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-pdf.png)
 
 [<img src="examples/thumbnails/hikmah-testing-custom-pdf.png"
 style="width:100.0%" />](examples/thumbnails/hikmah-testing-custom-pdf.png)
+
+### Fancy PDF through typst, default settings
+
+[<img src="examples/thumbnails/hikmah-testing-default-typst-pdf.png"
+style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-typst-pdf.png)
+
+### Fancy PDF through typst, custom fonts
+
+[<img src="examples/thumbnails/hikmah-testing-custom-typst-pdf.png"
+style="width:100.0%" />](examples/thumbnails/hikmah-testing-custom-typst-pdf.png)
+
+### Manuscripty PDF through Typst, default settings
+
+[<img
+src="examples/thumbnails/hikmah-testing-default-manuscript-typst-pdf.png"
+style="width:100.0%" />](examples/thumbnails/hikmah-testing-default-manuscript-typst-pdf.png)
+
+### Manuscripty PDF through Typst, custom fonts
+
+[<img
+src="examples/thumbnails/hikmah-testing-custom-manuscript-typst-pdf.png"
+style="width:100.0%" />](examples/thumbnails/hikmah-testing-custom-manuscript-typst-pdf.png)
 
 ### Manuscripty PDF, default settings
 

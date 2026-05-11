@@ -1,11 +1,12 @@
 title: Hikmah Manuscript
 author: Andrew Heiss
-version: 0.0.15
-quarto-required: ">=1.4.11"
+version: 0.1.0
+quarto-required: ">=1.8"
 contributes:
   formats:
     common:
       date-format: full
+
     docx:
       reference-doc: "styles/reference.docx"
       knitr:
@@ -13,6 +14,7 @@ contributes:
           dev: "ragg_png"
           dpi: 300
           out.width: "80%"
+
     odt:
       template: "templates/odt-manuscript.odt"
       reference-doc: "styles/reference.odt"
@@ -21,6 +23,19 @@ contributes:
           dev: "ragg_png"
           dpi: 300
           out.width: "80%"
+
+    typst:
+      citeproc: true
+      fontsize: 12pt
+
+      link-citations: true
+      linkcolor: "#483D8B"
+      citecolor: "#483D8B"
+
+      template-partials:
+        - "partials/typst-show.typ"
+        - "partials/typst-template.typ"
+
     pdf:
       documentclass: article
       papersize: letter
@@ -64,5 +79,6 @@ contributes:
       block-headings: false
       # Indent paragraphs instead of adding space between them
       indent: true
+
     html:
       theme: styles/pretty.scss

@@ -1,5 +1,5 @@
 ---
-title: |
+title: |-
   On the Surgical Removal of \
   Cardassian Cranial Implants
 subtitle: A case study of a Cardassian patient
@@ -41,7 +41,7 @@ keywords:
   - surgery
   - espionage
   - brains
-date: August 24, 2022
+date: 2026-05-10
 bibliography: references.bib
 format:
   hikmah-pdf:
@@ -64,6 +64,14 @@ format:
       - autolang=hyphen
       - isbn=false
       - uniquename=false
+
+  hikmah-typst: 
+    fontsize: 10.75pt
+    title-size: 1.45em
+    subtitle-size: 1.25em
+    mainfont: "EB Garamond"
+    heading-family: "Inter"
+
   hikmah-manuscript-pdf: 
     # APA-related things
     left-aligned: true  # Disable justification
@@ -85,11 +93,18 @@ format:
       - autolang=hyphen
       - isbn=false
       - uniquename=false
+  
+  hikmah-manuscript-typst:
+    fontsize: 12pt
+    mainfont: "Times New Roman"
+    linkcolor: "#D64038"
 ---
 
-We're acquainted with the wormhole phenomenon, but this... Is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times [@Lovelace:1842]. This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.
+We're acquainted with the wormhole phenomenon, but this... is a remarkable piece of bio-electronic engineering by which I see much of the EM spectrum ranging from heat and infrared through radio waves, et cetera, and forgive me if I've said and listened to this a thousand times [@Lovelace:1842]. 
 
-# Main section
+This planet's interior heat provides an abundance of geothermal energy. We need to neutralize the homing signal.
+
+# First-level heading
 
 It indicates a synchronic distortion in the areas emanating triolic waves. The cerebellum, the cerebral cortex, the brain stem,  the entire nervous system has been depleted of electrochemical energy [@Turing:1936]. 
 
@@ -98,58 +113,142 @@ n_lights <- 2 + 2
 n_lights
 ```
 
-Any device like that would produce high levels of triolic waves. These walls have undergone some kind of selective molecular polarization. I haven't determined if our phaser energy can generate a stable field. We could alter the photons with phase discriminators.
+Any device like that would produce high levels of triolic waves. These walls have undergone some kind of selective molecular polarization. I haven't determined if our phaser energy can generate a stable field. We could alter the photons with phase discriminators, or with [Fermat's last theorem](https://memory-alpha.fandom.com/wiki/Fermat%27s_last_theorem) (see @eq-fermats-last-theorem).
 
 $$
-y = \text{Something} + \beta_1 x_1
-$$
+x^n + y^n \neq z^n \quad \forall\ n > 2
+$$ {#eq-fermats-last-theorem alt="Fermat's last theorem"}
 
-## Subsection
+## Second-level heading
 
 Communication is not possible [@Keynes:1937]. The shuttle has no power (see @fig-n-lights). 
 
-Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems. 
+Using the gravitational pull of a star to slingshot back in time? We are going to Starbase Montgomery for Engineering consultations prompted by minor read-out anomalies. Probes have recorded unusual levels of geological activity in all five planetary systems.
 
-Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?
+> Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. 
 
-```{r plot-n-lights}
+The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Assemble a team. Look at records of the Drema quadrant. Would these scans detect artificial transmissions as well as natural signals?
+
+```{r}
 #| echo: false
 #| label: fig-n-lights
 #| fig-cap: There are four lights
 #| fig-width: 5
 #| fig-height: 1
 #| fig-align: "center"
+#| fig-alt: "Four lights"
+
 par(mar = c(0, 0, 0, 0))
 plot(x = seq(1:n_lights), y = rep(1, 4), col = "darkgoldenrod1", 
      pch = 8, cex = 4, axes = TRUE, ann = FALSE, xlab = FALSE, ylab = FALSE)
 ```
 
-## Other heading
+## Another second-level heading
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
+Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter.
 
-### Third
+### A third-level heading now
 
-inventore veritatis^[Thing] et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,^[Another thing] 
+Sensors indicate human life^[Thing] forms 30 meters below the planet's surface. Stellar flares are increasing in magnitude and frequency. Set course for Rhomboid Dronegar 006, warp seven. There's no evidence of an advanced communication network. Total guidance system failure, with less than 24 hours' reserve power.^[Another thing] 
 
-qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+| Default | Left | Right | Center |
+|---------|:-----|------:|:------:|
+| 12      | 12   |    12 |   12   |
+| 123     | 123  |   123 |  123   |
+| 1       | 1    |     1 |   1    |
 
-#### A 4th level heading
+: A table {#tbl-testing}
 
-qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+Shield effectiveness (see @tbl-testing) has been reduced 12 percent. We have covered the area in a spherical pattern which a ship without warp drive could cross in the given time.
 
-nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+#### A fourth(!) level heading
 
-- At vero eos et accusamus et iusto 
-- odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
-- similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
-- Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, 
+You saw something as tasty as meat, but inorganically materialized out of patterns used by our transporters.
 
-omnis dolor repellendus. 
+#### And another one
 
-1. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae 
-2. sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
-3. ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+Captain, the most elementary and valuable statement in science, the beginning of wisdom, is 'I do not know.' All transporters off.
+
+# Testing specific formatting things
+
+## Lists
+
+### Regular compact unordered list
+
+- Captain Benjamin Sisko
+  - Initially a commander
+- Colonel Kira Nerys
+- Lieutenant Commander Jadzia Dax
+- Lieutenant Commander Worf
+
+### Loose unordered list
+
+- Unidentified vessel travelling at sub warp speed, bearing 235.7. Fluctuations in energy readings from it, Captain.
+
+  Deflector power at maximum. Energy discharge in six seconds. 
+
+- All transporters off. 
+
+- The dark colourings of the scrapes are the leavings of natural rubber, 
+  - a type of non-conductive sole used by researchers 
+    - experimenting with electricity. 
+  - The molecules must have been partly de-phased by the anyon beam.
+
+### Regular compact ordered list
+
+1. Lieutenant Julian Bashir
+2. Lieutenant junior grade Nog
+3. Senior Chief Petty Officer Miles O'Brien
+4. Constable Odo
+
+### Loose ordered list
+
+1. Unidentified vessel travelling at sub warp speed, bearing 235.7. Fluctuations in energy readings from it, Captain. 
+
+2. All transporters off. 
+
+3. The dark colourings of the scrapes are the leavings of natural rubber, 
+   i. a type of non-conductive sole used by researchers experimenting with electricity. 
+   ii. The molecules must have been partly de-phased by the anyon beam.
+
+### Definition lists
+
+United Federation of Planets
+: The United Federation of Planets was a supranational interstellar union of multiple planetary constituent political entities operating semi-autonomously under a single central government founded on the principles of liberty, equality, peace, justice, and progress, with the purpose of furthering the universal rights and suffrage of all sentient life.
+
+The Klingon Empire
+: The Klingon Empire was the official state of the Klingon people.
+
+The Romulan Star Empire
+: The Romulan Star Empire (or Romulan Empire) was a major interstellar polity founded by the Romulan people and encompassing numerous member worlds and client states.
+
+  For much of its history, the Empire was one of the dominant powers of the Alpha and Beta Quadrants, maintaining a complex political system, advanced technology, and a far-reaching intelligence and diplomatic apparatus.
+
+## Callouts
+
+::: {.callout-note}
+This is a note callout. Sensors indicate no shuttle or other ships in this sector. According to coordinates, we have travelled 7,000 light years and are located near the system J-25.
+:::
+
+Here's some text.
+
+::: {.callout-warning}
+This is a warning callout. Damage report? Sections 27, 28 and 29 on decks four, five and six destroyed. Without our shields, at this range it is probable a photon detonation could destroy the Enterprise.
+:::
+
+::: {.callout-important}
+This is an important callout. The wormhole's size and short period would make this a local phenomenon.
+:::
+
+::: {.callout-tip}
+This is a tip callout. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it.
+:::
+
+::: {.callout-caution}
+This is an important callout. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter.
+:::
+
+# References
 
 ::: {.content-visible when-meta="endnotes"}
 ```{=latex}
